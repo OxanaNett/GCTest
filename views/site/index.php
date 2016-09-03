@@ -4,6 +4,7 @@
 
 $this->title = 'My Yii Application';
 ?>
+<meta http-equiv="refresh" content="0; url=/web/index.php/customer/index" />
 <div class="site-index">
 
     <div class="jumbotron">
