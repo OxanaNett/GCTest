@@ -6,10 +6,14 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'layout' =>'main',
+    'defaultRoute'=>'site/index',
+    'language'=>'ru_RU',
+    'charset'=>'utf-8',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'djsalkdhfasdkjh',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -17,6 +21,9 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

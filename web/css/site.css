@@ -11,7 +11,7 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 70px 5px 20px 5px;
 }
 
 .footer {
@@ -72,8 +72,39 @@ a.desc:after {
     content: "\e156";
 }
 
+.mytable td {
+    font-family: Arial, sans-serif;
+    font-size: inherit;
+    padding: 10px;
+    text-align: left;
+    color: #ffffffx;
+    border-bottom: none;
+    background: #ffffff;
+    border-collapse: collapse;
+}
+
+.grid-view table {
+    border: 1px solid #e3f3ff;
+    width: 100%;
+}
+
 .grid-view th {
-    white-space: nowrap;
+    padding: 10px 5px 10px 7px;
+    text-align: left;
+    color: slategray;
+    background: #ffffff;
+    font-weight: normal;
+    width:auto;
+}
+
+.grid-view td {
+    background: #ffffff;
+    height: auto;
+}
+
+.grid-viewodd td {
+    background: #e3f3ff;
+    padding: 10px 10px 10px 10px;
 }
 
 .hint-block {
@@ -88,4 +119,29 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
 }
