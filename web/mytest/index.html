@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Одежда Мастер</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid bs-cont">
+        <div class="row">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid bs-head">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Заказы</a></li>
+                            <li><a href="#"><span class="new">Клиенты</span></a></li>
+                        </ul>
+                        <div class="navbar-header">
+                              <li class="logo"> <a href="#"><img src="img\logo.jpg" class="img-responsive"></a></li>
+                        </div>
+                     </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                    <div class="panel-body">
+                       <ul class="nav navbar-filtr">
+                                <li class="active"><a href="#">Все клиенты</a></li>
+                                <li><a href="#"><span class="new">Новые</span></a></li>
+                                <li><a href="#"><span class="usual">Постоянные</span></a></li>
+                                <li><a href="#"><span class="vip">Вип клиенты</span></a></li>
+                        </ul>
+                    </div>
+                <div class="col-lg-3">
+
+                             <form class="navbar-form navbar-left" role="search">
+                                 <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control-search" placeholder="Поиск по клиентам">
+                                </div>
+                            </form>
+
+                </div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3">
+
+                    <form class="navbar-form navbar-right" role="search">
+                           <div class=".form-control-fromto">
+                            <div>Сортировать по последний заказ </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <div>Заказов от: <input type="text" class="form-control-fromto" placeholder=""> Заказов до: <input type="text" class="form-control-fromto" placeholder=""></div>
+                            </div>
+                        </form>
+                </div>
+            </nav>
+         </div>
+<div class="row">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th colspan="2">ФИО</th>
+                        <th>Последний заказ</th>
+                        <th>Всего заказов</th>
+                        <th>Сумма заказов</th>
+                        <th>Статус клиента</th>
+                        <th>Зарегистрирован</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td width="70px">
+                           <div class="bd_name">
+                            <div class="bd_item bd_item_new">
+                                <img class="avatar" src="img\avatar2.png" alt="...">
+                            </div>
+                           </div>
+                         </td>
+                        <td >
+                            <div class="name">
+                                Петров Петр Петрович
+                            </div>
+                        </td>
+                        <td>Последний заказ</td>
+                        <td><span class="label label-info">1</span></td>
+                        <td>Сумма заказов</td>
+                        <td><i class="new_one"></i><span>Новый</span></td>
+                        <td>Зарегистрирован</td>
+                    </tr>
+                    <tr>
+                        <td width="70px">
+                            <div class="bd_name">
+                                <div class="bd_item bd_item_vip">
+                                    <img class="avatar" src="img\avatar2.png" alt="...">
+                                </div>
+                            </div>
+                        </td>
+                        <td >
+                            <div class="name">
+                                Петров Петр Петрович
+                            </div>
+                        </td>
+                        <td>Последний заказ</td>
+                        <td><span class="label label-info">1</span></td>
+                        <td>Сумма заказов</td>
+                        <td><i class="vip_one"></i><span>Новый</span></td>
+                        <td>Зарегистрирован</td>
+                    </tr>
+                    <tr>
+                        <td width="70px">
+                            <div class="bd_name">
+                                <div class="bd_item bd_item_usual">
+                                    <img class="avatar" src="img\avatar2.png" alt="...">
+                                </div>
+                            </div>
+                        </td>
+                        <td >
+                            <div class="name">
+                                Петров Петр Петрович
+                            </div>
+                        </td>
+                        <td>Последний заказ</td>
+                        <td><span class="label label-info">1</span></td>
+                        <td>Сумма заказов</td>
+                        <td><i class="usual_one"></i><span>Новый</span></td>
+                        <td>Зарегистрирован</td>
+                    </tr>
+                    </tbody>
+                </table>
+</div>
+</div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

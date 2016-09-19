@@ -15,11 +15,13 @@ class CustomerSearch extends Customer
     /**
      * @inheritdoc
      */
+    public $globalSearch;
+
     public function rules()
     {
         return [
             [['id', 'status_id'], 'integer'],
-            [['Name', 'reg_date', 'phoneNumber', 'photo'], 'safe'],
+            [['Name', 'globalSearch', 'reg_date', 'phoneNumber', 'photo'], 'safe'],
         ];
     }
 
@@ -59,14 +61,27 @@ class CustomerSearch extends Customer
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'reg_date' => $this->reg_date,
-            'status_id' => $this->status_id,
+           'id' => $this->id,
+           'reg_date' => $this->reg_date,
+           'status_id' => $this->status_id,
         ]);
 
-        $query->andFilterWhere(['like', 'Name', $this->Name])
-            ->andFilterWhere(['like', 'phoneNumber', $this->phoneNumber])
-            ->andFilterWhere(['like', 'photo', $this->photo]);
+        $query->andFilterWhere(['or', ['like', 'Name', $this->globalSearch],
+                                      ['like', 'phoneNumber', $this->globalSearch]]);
+
+        $filterStatus = '';
+        if (array_key_exists('filter', $params)) {
+            $filterStatus = $params['filter'];
+        }
+
+        if ($filterStatus != '') {
+            $statusQuery = CustomerStatus::find()->where(['like', 'name', $filterStatus]);
+            $filterStatusRecord = $statusQuery->one();
+            if ($filterStatusRecord != NULL) {
+                $filterStatusId = $filterStatusRecord->toArray()['id'];
+                $query->andFilterWhere(['like', 'status_id', $filterStatusId]);
+            }
+        }
 
         return $dataProvider;
     }
